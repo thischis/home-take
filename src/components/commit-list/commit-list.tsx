@@ -12,6 +12,7 @@ const CommitList = () => {
     isError,
     isLoading,
   } = useCommits();
+
   return (
     <div className="container">
       {isLoading && <Spinner color="light" />}

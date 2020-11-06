@@ -1,9 +1,7 @@
 import React from 'react';
 import { ListGroupItem } from 'reactstrap';
-
-import './index.css';
-
 import { SubData } from '../sub-data';
+import './index.css';
 
 interface CommitItemProps {
   authorName: string;

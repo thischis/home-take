@@ -17,17 +17,14 @@ export const useCommits = () => {
     const fetchCommits = async () => {
       setIsError(false);
       setIsLoading(true);
-
       try {
         const { data } = await axios.get<CommitModel[]>(API_URL);
         setData({ commits: data });
       } catch (e) {
         setIsError(true);
       }
-
       setIsLoading(false);
     };
-
     fetchCommits();
   }, []);
   return { data, isError, isLoading };
